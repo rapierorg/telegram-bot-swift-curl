@@ -3,7 +3,7 @@ import CCurl
 import TelegramBotSDKRequestProvider
 
 public class CurlRequestProvider: RequestProvider {
-    static func doRequest(endpointUrl: URL, contentType: String, requestData: Data, completion: @escaping RequestCompletion) {
+    public static func doRequest(endpointUrl: URL, contentType: String, requestData: Data, completion: @escaping RequestCompletion) {
         var completeRequestData = requestData
         completeRequestData.append(0)
         
