@@ -8,7 +8,7 @@ public class CurlRequestProvider: RequestProvider {
         completeRequestData.append(0)
         
         // -1 for '\0'
-        let byteCount = requestData.count - 1
+        let byteCount = completeRequestData.count - 1
         completeRequestData.withUnsafeBytes { (bytes) -> Void in
             curlPerformRequest(endpointUrl: endpointUrl, contentType: contentType, requestBytes: bytes, byteCount: byteCount, completion: completion)
         }
